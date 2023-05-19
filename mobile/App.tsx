@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar'
-import { ImageBackground, View } from 'react-native'
+import { ImageBackground, Text, TouchableOpacity, View } from 'react-native'
 
 import { BaiJamjuree_700Bold } from '@expo-google-fonts/bai-jamjuree'
 
@@ -31,7 +31,7 @@ export default function App() {
   return (
     <ImageBackground
       source={blurBg}
-      className="relative flex-1 items-center bg-gray-900"
+      className="relative flex-1 items-center bg-gray-900 px-8"
       imageStyle={{ position: 'absolute', left: '-100%' }}
     >
       <StyledStripes className="absolute left-2" />
@@ -39,6 +39,7 @@ export default function App() {
       <View className="flex-1 items-center justify-center gap-6">
         <NLWLogo />
       </View>
+
       <StatusBar style="light" translucent />
     </ImageBackground>
   )
