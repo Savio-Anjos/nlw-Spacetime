@@ -31,7 +31,7 @@ export default function App() {
   return (
     <ImageBackground
       source={blurBg}
-      className="relative flex-1 items-center bg-gray-900 px-8"
+      className="relative flex-1 items-center bg-gray-900 px-8 py-10"
       imageStyle={{ position: 'absolute', left: '-100%' }}
     >
       <StyledStripes className="absolute left-2" />
@@ -58,7 +58,9 @@ export default function App() {
           </Text>
         </TouchableOpacity>
       </View>
-
+      <Text className="text-center font-body text-sm leading-relaxed text-gray-200">
+        Feito com 💜 no NLW da Rocketseat
+      </Text>
       <StatusBar style="light" translucent />
     </ImageBackground>
   )
