@@ -42,7 +42,7 @@ export default function App() {
           <Text className="text-center font-title text-2xl leading-tight text-gray-50">
             Sua cápsula do tempo
           </Text>
-          <Text className="tex-gray-100 text-center font-body text-base leading-relaxed">
+          <Text className="tex-gray-100 text-center font-body text-base leading-relaxed text-gray-100">
             Colecione momentos marcantes da sua jornada e compartilhe (se
             quiser) com o mundo!
           </Text>
