@@ -4,6 +4,7 @@ import { ImageBackground, View } from 'react-native'
 import { BaiJamjuree_700Bold } from '@expo-google-fonts/bai-jamjuree'
 
 import blurBg from './src/assets/bg-blur.png'
+import NLWLogo from './src/assets/nlw-spacetime-logo.svg'
 import Stripes from './src/assets/stripes.svg'
 
 import {
@@ -35,7 +36,9 @@ export default function App() {
     >
       <StyledStripes className="absolute left-2" />
 
-      <View className="flex-1 items-center justify-center gap-6"></View>
+      <View className="flex-1 items-center justify-center gap-6">
+        <NLWLogo />
+      </View>
       <StatusBar style="light" translucent />
     </ImageBackground>
   )
