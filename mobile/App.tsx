@@ -38,6 +38,25 @@ export default function App() {
 
       <View className="flex-1 items-center justify-center gap-6">
         <NLWLogo />
+
+        <View className="space-y-2">
+          <Text className="text-center font-title text-2xl leading-tight text-gray-50">
+            Sua cápsula do tempo
+          </Text>
+          <Text className="tex-gray-100 text-center font-body text-base leading-relaxed">
+            Colecione momentos marcantes da sua jornada e compartilhe (se
+            quiser) com o mundo!
+          </Text>
+        </View>
+
+        <TouchableOpacity
+          activeOpacity={0.7}
+          className="rounded-full bg-green-500 px-5 py-2"
+        >
+          <Text className="font-alt text-sm uppercase text-black">
+            Cadastrar lembrança
+          </Text>
+        </TouchableOpacity>
       </View>
 
       <StatusBar style="light" translucent />
