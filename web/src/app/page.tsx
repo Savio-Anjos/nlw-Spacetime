@@ -1,7 +1,6 @@
-import { User } from 'lucide-react'
-
 import { Copyright } from '@/components/Copyright'
 import { Hero } from '@/components/Hero'
+import { SignIn } from '@/components/SignIn'
 
 export default function Home() {
   return (
@@ -16,6 +15,8 @@ export default function Home() {
 
         {/* Sign In */}
 
+        <SignIn />
+
         {/* Hero */}
         <Hero />
 
@@ -25,17 +26,7 @@ export default function Home() {
       </div>
 
       {/* Right */}
-      <div className="flex flex-col bg-[url(../assets/bg-stars.svg)] bg-cover p-16">
-        <div className="flex flex-1 items-center justify-center">
-          <p className="w-[360px] text-center leading-relaxed">
-            Você ainda não registrou nenhuma lembrança, comece a{' '}
-            <a href="" className="underline hover:text-gray-50">
-              criar agora
-            </a>
-            !
-          </p>
-        </div>
-      </div>
+      <div className="flex flex-col bg-[url(../assets/bg-stars.svg)] bg-cover p-16"></div>
     </main>
   )
 }
