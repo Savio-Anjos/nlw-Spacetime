@@ -12,10 +12,18 @@ import {
   Roboto_400Regular,
   Roboto_700Bold,
 } from '@expo-google-fonts/roboto'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { styled } from 'nativewind'
+import { makeRedirectUri, useAuthRequest } from 'expo-auth-session'
 
 const StyledStripes = styled(Stripes)
+
+const discovery = {
+  authorizationEndpoint: 'https://github.com/login/oauth/authorize',
+  tokenEndpoint: 'https://github.com/login/oauth/access_token',
+  revocationEndpoint:
+    'https://github.com/settings/connections/applications/6dc97b8ba60b7633a1e4',
+}
 
 export default function App() {
   const [hasLoadedFonts] = useFonts({
@@ -23,6 +31,31 @@ export default function App() {
     Roboto_700Bold,
     BaiJamjuree_700Bold,
   })
+
+  const [request, response, signInWithGithub] = useAuthRequest(
+    {
+      clientId: '6dc97b8ba60b7633a1e4',
+      scopes: ['identity'],
+      redirectUri: makeRedirectUri({
+        scheme: 'nlwspacetime',
+      }),
+    },
+    discovery,
+  )
+
+  useEffect(() => {
+    /* console.log(
+      makeRedirectUri({
+        scheme: 'nlwspacetime',
+      }),
+    ) */
+    console.log(response)
+    if (response?.type === 'success') {
+      const { code } = response.params
+
+      console.log(code)
+    }
+  }, [response])
 
   if (!hasLoadedFonts) {
     return null
@@ -52,6 +85,7 @@ export default function App() {
         <TouchableOpacity
           activeOpacity={0.7}
           className="rounded-full bg-green-500 px-5 py-2"
+          onPress={() => signInWithGithub()}
         >
           <Text className="font-alt text-sm uppercase text-black">
             Cadastrar lembrança
