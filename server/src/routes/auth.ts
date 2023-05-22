@@ -1,4 +1,5 @@
 import { FastifyInstance } from 'fastify'
+
 import { z } from 'zod'
 import axios from 'axios'
 import { prisma } from '../lib/prisma'
