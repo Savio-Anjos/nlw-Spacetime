@@ -22,7 +22,7 @@ app.register(memoriesRoutes)
 
 app
   .listen({
-    port: 3333,
+    port: 3334,
     host: '0.0.0.0',
   })
   .then(() => {
