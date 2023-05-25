@@ -19,13 +19,10 @@ Esse projeto está utilizando as seguintes tecnologias:
 
 
 ## ⚙️ Funcionalidades
-- Sistema de cadastro e login de usuários;
-- Criar novas categorias;
-- Listar filmes por categoria;
-- Cadastrar novos filmes;
-- Envio de imagem para logo do filme;
-- Deletar filme;
-- Adicionar e remover dos favoritos;
+- Cadastro e login através da API do Github;
+- Criar novas memórias;
+- Listar memórias;
+- Envio de imagem para capa da memória;
 
 ## 🎲 Como utilizar
 ### Clone esse repositório
