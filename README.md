@@ -6,6 +6,10 @@
 <img src="https://img.shields.io/github/last-commit/Savio-Anjos/nlw-Spacetime?color=5c3ea3"> 
 </p>
 
+##  Resumo 📖:
+Esse projeto é uma cápsula do tempo onde os usuários podem listar 
+momentos importantes organizando com base nas datas. Fique a vontade para experimentar da forma que achar melhor☺️
+
 ## 🚀 Tecnologias
 Esse projeto está utilizando as seguintes tecnologias:
     
