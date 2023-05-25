@@ -4,6 +4,7 @@ import Icon from '@expo/vector-icons/Feather'
 import * as SecureStore from 'expo-secure-store'
 
 import NLWLogo from '../src/assets/nlw-spacetime-logo.svg'
+
 import { Link, useRouter } from 'expo-router'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useEffect, useState } from 'react'
