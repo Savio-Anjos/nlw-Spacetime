@@ -1,11 +1,11 @@
- <p align='center'><img width='400' src="./.github/logo.png"/></p>
+ <p align='center'><img width='400' src="./.github/nlw-spacetime-logo.svg"/></p>
 
- <h1 align="center">Organize Flix</h1>
+ <h1 align="center">Nlw Spacetime</h1>
 
  <p align='center'>
-<img src="https://img.shields.io/github/repo-size/Savio-Anjos/Organize-Robbies?color=3B82F6">
-<img src="https://img.shields.io/github/languages/count/Savio-Anjos/Organize-Robbies?color=3B82F6">
-<img src="https://img.shields.io/github/last-commit/Savio-Anjos/Organize-Robbies?color=3B82F6"> 
+<img src="https://img.shields.io/github/repo-size/Savio-Anjos/nlw-Spacetime?color=5c3ea3">
+<img src="https://img.shields.io/github/languages/count/Savio-Anjos/nlw-Spacetime?color=5c3ea3">
+<img src="https://img.shields.io/github/last-commit/Savio-Anjos/nlw-Spacetime?color=5c3ea3"> 
 </p>
 
 ## 🚀 Tecnologias
