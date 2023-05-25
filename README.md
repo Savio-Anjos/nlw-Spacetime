@@ -8,7 +8,7 @@
 
 ##  Resumo 📖:
 Esse projeto é uma cápsula do tempo onde os usuários podem listar 
-momentos importantes organizando com base nas datas. Fique a vontade para experimentar da forma que achar melhor☺️
+momentos importantes e organizando com base nas datas. Fique a vontade para experimentar da forma que achar melhor☺️
 
 ## 🚀 Tecnologias
 Esse projeto está utilizando as seguintes tecnologias:
