@@ -1,7 +1,5 @@
  <p align='center'><img width='400' src="./.github/nlw-spacetime-logo.svg"/></p>
 
- <h1 align="center">Nlw Spacetime</h1>
-
  <p align='center'>
 <img src="https://img.shields.io/github/repo-size/Savio-Anjos/nlw-Spacetime?color=5c3ea3">
 <img src="https://img.shields.io/github/languages/count/Savio-Anjos/nlw-Spacetime?color=5c3ea3">
