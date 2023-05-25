@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Text, View } from 'react-native'
+import { Image, Text, View } from 'react-native'
 import Icon from '@expo/vector-icons/Feather'
 import * as ImagePicker from 'expo-image-picker';
 
@@ -71,12 +71,17 @@ export default function NewMemory() {
                     onPress={openImagePicker}
                     className="h-32 items-center justify-center rounded-lg border border-dashed border-gray-500 bg-black/20"
                 >
-                    <View className="flex-row items-center gap-2">
-                        <Icon name="image" color="#FFF" />
-                        <Text className="font-body text-sm text-gray-200">
-                            Adicionar foto ou vídeo de capa
-                        </Text>
-                    </View>
+                    {preview ? (
+                        <Image source={{ uri: preview }} alt="" className='h-full w-full rounded-lg object-cover' />
+                    ) : (
+                        <View className="flex-row items-center gap-2">
+                            <Icon name="image" color="#FFF" />
+                            <Text className="font-body text-sm text-gray-200">
+                                Adicionar foto ou vídeo de capa
+                            </Text>
+                        </View>
+                    )}
+
                 </TouchableOpacity>
 
                 <TextInput
