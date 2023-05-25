@@ -14,6 +14,8 @@ Esse projeto está utilizando as seguintes tecnologias:
 - [Node](https://nodejs.org/en/)
 - [Typescript](https://www.typescriptlang.org/)  
 - [Next](https://nextjs.org//)  
+- [ReactNative](https://reactnative.dev/)  
+- [Expo](https://expo.dev/)  
 
 
 ## ⚙️ Funcionalidades
