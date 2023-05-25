@@ -1,16 +1,20 @@
 /* eslint-disable prettier/prettier */
 import { Image, Text, View } from 'react-native'
 import Icon from '@expo/vector-icons/Feather'
-import * as ImagePicker from 'expo-image-picker';
-import * as SecureStore from 'expo-secure-store';
-
+import * as ImagePicker from 'expo-image-picker'
+import * as SecureStore from 'expo-secure-store'
 
 import NLWLogo from '../src/assets/nlw-spacetime-logo.svg'
 import { Link, useRouter } from 'expo-router'
-import { ScrollView, Switch, TextInput, TouchableOpacity } from 'react-native-gesture-handler'
+import {
+    ScrollView,
+    Switch,
+    TextInput,
+    TouchableOpacity,
+} from 'react-native-gesture-handler'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import React, { useState } from 'react'
-import { api } from '../src/lib/api';
+import { api } from '../src/lib/api'
 
 export default function NewMemory() {
     const { bottom, top } = useSafeAreaInsets()
@@ -26,15 +30,12 @@ export default function NewMemory() {
             const result = await ImagePicker.launchImageLibraryAsync({
                 mediaTypes: ImagePicker.MediaTypeOptions.Images,
                 quality: 1,
-            });
+            })
 
             if (result.assets[0]) {
                 setPreview(result.assets[0].uri)
             }
-        } catch (error) {
-
-        }
-
+        } catch (error) { }
     }
 
     async function handleCreateMemory() {
@@ -48,28 +49,31 @@ export default function NewMemory() {
             uploadFormData.append('file', {
                 uri: preview,
                 name: 'image.jpg',
-                type: 'image/jpeg'
+                type: 'image/jpeg',
             } as any)
 
             const uploadResponse = await api.post('/upload', uploadFormData, {
                 headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
+                    'Content-Type': 'multipart/form-data',
+                },
             })
 
             coverUrl = uploadResponse.data.fileUrl
-
         }
 
-        await api.post('/memories', {
-            content,
-            isPublic,
-            coverUrl
-        }, {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        })
+        await api.post(
+            '/memories',
+            {
+                content,
+                isPublic,
+                coverUrl,
+            },
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            },
+        )
 
         router.push('/memories')
     }
@@ -108,7 +112,11 @@ export default function NewMemory() {
                     className="h-32 items-center justify-center rounded-lg border border-dashed border-gray-500 bg-black/20"
                 >
                     {preview ? (
-                        <Image source={{ uri: preview }} alt="" className='h-full w-full rounded-lg object-cover' />
+                        <Image
+                            source={{ uri: preview }}
+                            alt=""
+                            className="h-full w-full rounded-lg object-cover"
+                        />
                     ) : (
                         <View className="flex-row items-center gap-2">
                             <Icon name="image" color="#FFF" />
@@ -117,28 +125,24 @@ export default function NewMemory() {
                             </Text>
                         </View>
                     )}
-
                 </TouchableOpacity>
 
                 <TextInput
                     multiline
                     value={content}
-                    className='p-0 font-body text-lg text-gray-50'
+                    className="p-0 font-body text-lg text-gray-50"
                     onChangeText={setContent}
-                    textAlignVertical='top'
+                    textAlignVertical="top"
                     placeholderTextColor="#56565a"
-                    placeholder='Fique livre para adicionar fotos, vídeos e relatos sobre essa experiência que você quer lembrar para sempre.'
+                    placeholder="Fique livre para adicionar fotos, vídeos e relatos sobre essa experiência que você quer lembrar para sempre."
                 />
 
                 <TouchableOpacity
                     activeOpacity={0.7}
-                    className="rounded-full self-end items-center bg-green-500 px-5 py-2"
+                    className="items-center self-end rounded-full bg-green-500 px-5 py-2"
                     onPress={handleCreateMemory}
-
                 >
-                    <Text className="font-alt text-sm uppercase text-black">
-                        Salvar
-                    </Text>
+                    <Text className="font-alt text-sm uppercase text-black">Salvar</Text>
                 </TouchableOpacity>
             </View>
         </ScrollView>
