@@ -27,12 +27,12 @@ Esse projeto está utilizando as seguintes tecnologias:
 ## 🎲 Como utilizar
 ### Clone esse repositório
 ```bash
-git clone https://github.com/Savio-Anjos/Organize-Flix.git
+git clone https://github.com/Savio-Anjos/nlw-Spacetime.git
 
 ```
 ### Navegue até o diretório backend
 ```bash 
-cd backend
+cd server
 ```
 
 ### Instale as dependências
@@ -51,7 +51,7 @@ npm run dev
 
 ### Navegue até o diretório frontend
 ```bash 
-cd frontend
+cd web
 ```
 
 ### Instale as dependências
@@ -65,6 +65,24 @@ yarn
 ```bash
 yarn dev
 npm run dev
+```
+
+### Navegue até o diretório mobile
+```bash 
+cd mobile
+```
+
+### Instale as dependências
+```bash
+npm i
+```
+```bash
+yarn
+```
+### Inicie a aplicação mobile
+```bash
+yarn start
+npm start
 ```
 
 ## 🖼️ Layout
